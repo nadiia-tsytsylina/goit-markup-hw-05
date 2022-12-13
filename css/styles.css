@@ -9,6 +9,7 @@
   --footer-text:#e7e9fc;
   --filter-button-color:#f4f4fd;
   --accent-color:#31D0AA;
+  --modal-background:#FCFCFC;
 }
 
 body {
@@ -115,8 +116,53 @@ img{
   height: 4px;
 }
 
-/*main
-hero*/
+/*main */
+/* modal */
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(46, 47, 66, 0.4) ;
+}
+.backdrop.is-hidden{
+  opacity: 0;
+  pointer-events: none;
+}
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 408px;
+  min-height: 576px;
+  background-color: var(--modal-background);
+}
+.close-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin-top: 24px;
+  margin-right: 24px;
+  margin-left: 360px;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.close-button:hover{
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.close-icon{
+  width: 8px;
+  height: 8px;
+
+}
+/* hero */
 .hero {
   background-color: var(--background-dark);
   background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
